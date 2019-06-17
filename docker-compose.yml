@@ -24,7 +24,6 @@ services:
                 -Dcsrf.filter.enabled=false
                 -Dalfresco.restApi.basicAuthScheme=true
                 -Dmessaging.subsystem.autoStart=false
-                -Dalfresco.restApi.basicAuthScheme=true
                 -Xms1g -Xmx1g
                 "
 
