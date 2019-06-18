@@ -6,7 +6,7 @@ services:
     # Alfresco Repository, using "useDynamicShardRegistration" for SOLR Shard discovery
     # Messaging Subsystem has been disabled, as it's not used in Alfresco Community
     alfresco:
-        image: alfresco/alfresco-content-repository-community:${ALFRESCO_CE_TAG}
+        image: alfresco/alfresco-content-repository:${ALFRESCO_TAG}
         mem_limit: 1500m
         environment:
             JAVA_OPTS : "

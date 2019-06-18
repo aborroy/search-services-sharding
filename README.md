@@ -4,7 +4,7 @@ Deployment template based in official [Docker Composition](https://github.com/Al
 
 >> DBID (DB_ID): This method is available in Alfresco Search Services 1.0 and later versions and is the default sharding option in Solr 6. Nodes are evenly distributed over the shards at random based on the murmur hash of the DBID. The access control information is duplicated in each shard. The distribution of nodes over each shard is very even and shards grow at the same rate.
 
-This configuration provides two SOLR Shards, identified as "0" and "1". Despite this feature is available for both Enterprise and Community versions, documentation is available at [SOLR Sharding](https://docs.alfresco.com/search-enterprise/concepts/solr-shard-overview.html).
+This configuration provides two SOLR Shards, identified as "0" and "1". This feature is **only available for Enterprise** version, documentation is available at [SOLR Sharding](https://docs.alfresco.com/search-enterprise/concepts/solr-shard-overview.html).
 
 Multiple shard instances have the following advantages:
 
@@ -67,12 +67,12 @@ Start docker and check the ports are correctly bound.
 ```bash
 $ docker-compose up -d
 $ docker ps --format '{{.Names}}\t{{.Image}}\t{{.Ports}}'
-sharding_share_1        alfresco/alfresco-share:6.1.0                            8000/tcp, 8080/tcp
-sharding_alfresco_1     alfresco/alfresco-content-repository-community:6.1.2-ga  8080/tcp
-sharding_proxy_1        nginx:stable-alpine                                      0.0.0.0:80->80/tcp
-sharding_postgres_1     postgres:10.1                                            0.0.0.0:5432->5432/tcp
-sharding_solr6shard2_1  search-services-sharding_solr6shard2                     8983/tcp
-sharding_solr6shard1_1  search-services-sharding_solr6shard1                     8983/tcp
+sharding_share_1        alfresco/alfresco-share:6.1.0                     8000/tcp, 8080/tcp
+sharding_alfresco_1     alfresco/alfresco-content-repository:6.1.0.5      8080/tcp
+sharding_proxy_1        nginx:stable-alpine                               0.0.0.0:80->80/tcp
+sharding_postgres_1     postgres:10.1                                     0.0.0.0:5432->5432/tcp
+sharding_solr6shard2_1  search-services-sharding_solr6shard2              8983/tcp
+sharding_solr6shard1_1  search-services-sharding_solr6shard1              8983/tcp
 ```
 
 ### Viewing System Logs
