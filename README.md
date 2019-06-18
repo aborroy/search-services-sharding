@@ -16,7 +16,7 @@ You should review volumes, configuration, modules & tuning parameters before usi
 
 ## Source Images
 
-* [alfresco-content-repository-community:6.1.2-ga](https://hub.docker.com/r/alfresco/alfresco-content-repository-community)
+* [alfresco-content-repository:6.1.0.5](https://hub.docker.com/r/alfresco/alfresco-content-repository)
 * [alfresco-share:6.1.0](https://hub.docker.com/r/alfresco/alfresco-share)
 * [alfresco-search-services:1.3.0.4](https://hub.docker.com/r/alfresco/alfresco-search-services)
 * [postgres:10.1](https://hub.docker.com/_/postgres)
